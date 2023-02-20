@@ -25,7 +25,7 @@ app.get("/insert", async (req: express.Request, res: express.Response) => {
 
 app.get("/user", async (req: express.Request, res: express.Response) => {
   const users = await User.getRepository().find();
-  console.log(users);
+  const categories = await Task.getRepository().find();
   res.json({ users });
 });
 
